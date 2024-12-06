@@ -298,6 +298,11 @@
                     </a>
                 </div>
             </section>
+            <section class="text-center mb-5">
+                <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <div id="map" style="height: 500px; width: 100%;"></div>
+    </section>
     </div>
         
     <footer class="bg-dark text-white py-4 mt-auto">
