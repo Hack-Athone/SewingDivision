@@ -6,7 +6,7 @@
             <a class="navbar d-flex align-items-center text-dark text-decoration-none" href="/">
                 <div class="fs-5 d-none d-md-block mr-3">Швейна Рота</div>
                 <img 
-                    src="/static/icons/favicon.png" 
+                    src="/icons/favicon.png" 
                     alt="Швейна рота" 
                     class="img-fluid" 
                     style="width: 50px; height: 50px;">
@@ -87,12 +87,12 @@
                         <ul class="dropdown-menu" aria-labelledby="languageDropdown">
                             <li>
                                 <a class="dropdown-item" href="#" id="ukrainian">
-                                    <img src="/static/img/Flag_of_Ukraine.png" alt="UA" width="20" class="me-2"> Українська
+                                    <img src="/img/Flag_of_Ukraine.png" alt="UA" width="20" class="me-2"> Українська
                                 </a>
                             </li>
                             <li>
                                 <a class="dropdown-item" href="#" id="english">
-                                    <img src="/static/img/Flag_of_the_United_Kingdom_(3-2).svg.png" alt="EN" width="20" class="me-2"> English
+                                    <img src="/img/Flag_of_the_United_Kingdom_(3-2).svg.png" alt="EN" width="20" class="me-2"> English
                                 </a>
                             </li>
                         </ul>
