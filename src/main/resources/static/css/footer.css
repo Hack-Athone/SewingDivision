@@ -1,0 +1,81 @@
+/* Загальний стиль футера */
+footer {
+    padding: 40px 0;
+    background-color: #d72c2c!important;
+    color: #d1d1d1;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #f4a261;
+    text-decoration: underline;
+}
+
+/* Заголовки футера */
+.footer-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+/* Опис під заголовком */
+.footer-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Контактна інформація */
+.footer-contact li {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+}
+
+.footer-contact i {
+    margin-right: 8px;
+    color: #f4a261;
+}
+
+/* Посилання у футері */
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links li a {
+    font-size: 0.9rem;
+    color: #d1d1d1;
+}
+
+/* Низ футера */
+footer .small {
+    color: #9a9a9a;
+}
+
+footer .text-lg-right a {
+    text-decoration: underline;
+}
+
+/* Стиль для тексту в футері */
+footer .footer-text {
+    color: #bfbfbf; /* Світло-сірий колір для хорошого контрасту */
+    font-size: 0.875rem; /* Трохи збільшений шрифт для зручного читання */
+}
+
+footer .footer-text a {
+    color: #f4a261; /* Акцентний колір для посилання */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer .footer-text a:hover {
+    color: #bfbfbf; /* Білий колір при наведенні */
+}
+

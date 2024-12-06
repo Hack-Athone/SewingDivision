@@ -1,0 +1,143 @@
+.header_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    max-height: 100px;
+    width: 100%;
+    height: 70%;
+
+    background: url("../img/header2.png")no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.header-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%; /* задаем высоту изображения в 100% от высоты контейнера */
+  width: auto; /* автоматический расчет ширины */
+  object-fit: cover; /* масштабируем изображение и сохраняем пропорции */
+  z-index: -1; /* задаем индекс z для помещения изображения под текстом */
+}
+
+.header-title {
+  position: relative;
+  z-index: 1; /* задаем индекс z для помещения заголовка над изображением */
+  margin: 0;
+  padding: 20px;
+  color: #fff;
+  text-shadow: 1px 1px #000;
+  font-size: 2rem;
+}
+
+.custom-text {
+    font-size: 17px;
+}
+
+a {
+    font-weight: bolder;
+}
+
+#toggle-theme {
+    border-radius: 10px;
+
+}
+
+/* Стандартна світла тема */
+.navbar .dropdown-menu {
+  /* background-color: #ffffff; */
+  color: #000000;
+}
+
+/* Темна тема */
+.dark-theme header {
+  background-color: #343a40;
+}
+.dark-theme .navbar .dropdown-menu {
+  background-color: #343a40;
+  color: #ffffff;
+}
+
+.dark-theme .navbar .dropdown-menu button:hover {
+  color: #adb5bd;
+  background-color: #495057;
+}
+
+.dark-theme .navbar .dropdown-menu a:hover {
+  color: #adb5bd;
+  background-color: #495057;
+}
+
+.dark-theme .navbar .dropdown-menu .dropdown-item {
+  background-color: #343a40;
+  color: #ffffff;
+  border-radius: 0;
+}
+
+.navbar .dropdown-divider {
+  border-top: 0.5px solid #2b90d9
+}
+
+/* Сховати рядок пошуку за замовчуванням */
+#search-bar {
+  display: none;
+}
+
+/* Показати рядок пошуку */
+#search-bar.active {
+  display: flex;
+}
+
+#search-bar .form-control {
+  border-radius: 30px;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  transition: box-shadow 0.3s ease, border 0.3s ease;
+}
+
+#search-bar .form-control:focus {
+  border: 1px solid #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Стилі для поля вводу */
+#search-input {
+  border-radius: 8px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease;
+}
+
+#search-input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+#search-bar-mobile .form-control {
+  border-radius: 30px;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  transition: box-shadow 0.3s ease, border 0.3s ease;
+}
+
+#search-bar-mobile .form-control:focus {
+  border: 1px solid #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Стилі для поля вводу */
+#search-input-mobile {
+  border-radius: 8px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease;
+}
+
+#search-input-mobile:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}

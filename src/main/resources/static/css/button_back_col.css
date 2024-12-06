@@ -1,0 +1,68 @@
+*.light-theme {
+  background-color: #FFFFFF;
+  color: #212529;
+}
+
+/* Стили для тёмной темы */
+*.dark-theme {
+  background-color: #212529;
+  color: #FFFFFF;
+}
+
+.navbar-light {
+  background-color: #ffffff;
+  color: #212529;
+}
+
+.navbar-dark {
+  background-color: #212529;
+  color: #FFFFFF;
+}
+
+.header-light {
+  background-color: #ffffff;
+  color: #212529;
+}
+
+.header-dark {
+  background-color: #212529;
+  color: #FFFFFF;
+}
+
+/* Тема Light */
+body.light-theme {
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+.navbar.light-theme {
+  background-color: #ffffff;
+  color: #212529;
+}
+
+.header.light-theme .nav-link {
+  color: #212529;
+}
+
+.header.light-theme .nav-link:hover {
+  color: #007bff;
+}
+
+/* Тема Dark */
+body.dark-theme {
+  background-color: #212529;
+  color: #f8f9fa;
+}
+
+.navbar.dark-theme {
+  background-color: #343a40;
+  color: #f8f9fa;
+}
+
+.header.dark-theme .nav-link {
+  color: #f8f9fa;
+}
+
+.header.dark-theme .nav-link:hover {
+  color: #17a2b8;
+}
