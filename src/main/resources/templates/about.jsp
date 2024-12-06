@@ -1,3 +1,4 @@
+<%@ page contentType="text/html; charset=utf-8" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,31 +8,31 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
-    <link rel="stylesheet" href="/static/useful_things_for_front/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/static/useful_things_for_front/lightbox2/css/lightbox.min.css">
-    <link rel="stylesheet" href="/static/useful_things_for_front/nouislider/nouislider.min.css'">
+    <link rel="stylesheet" href="useful_things_for_front/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="useful_things_for_front/lightbox2/css/lightbox.min.css">
+    <link rel="stylesheet" href="useful_things_for_front/nouislider/nouislider.min.css'">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/static/useful_things_for_front/owl.carousel2/assets/owl.carousel.min.css'">
-    <link rel="stylesheet" href="/static/useful_things_for_front/owl.carousel2/assets/owl.theme.default.css'">
+    <link rel="stylesheet" href="useful_things_for_front/owl.carousel2/assets/owl.carousel.min.css'">
+    <link rel="stylesheet" href="useful_things_for_front/owl.carousel2/assets/owl.theme.default.css'">
     <!-- navbar -->
-    <link href="/static/css/header.css" rel="stylesheet" type="text/css">
-    <link href="/static/css/button_back_col.css" rel="stylesheet" type="text/css">
+    <link href="css/header.css" rel="stylesheet" type="text/css">
+    <link href="css/button_back_col.css" rel="stylesheet" type="text/css">
     <!-- navbar -->
     <!-- footer -->
-    <link rel="stylesheet" href="/static/css/footer.css">
+    <link rel="stylesheet" href="css/footer.css">
     <!-- footer -->
-    <link rel="stylesheet" href="/static/css/style.blue.min.css" id="theme-stylesheet">
+    <link rel="stylesheet" href="css/style.blue.min.css" id="theme-stylesheet">
     <!-- index -->
-    <link rel="stylesheet" href="/static/css/about.css">
+    <link rel="stylesheet" href="css/about.css">
     <!-- index -->
-    <link rel="shortcut icon" href="/static/icons/favicon.ico">
+    <link rel="shortcut icon" href="icons/favicon.ico">
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;700&amp;display=swap">
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@300;400;800&amp;display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    
+
 </head>
 <body>
     <div class="page-holder">
@@ -41,10 +42,10 @@
                     <!-- Лого -->
                     <a class="navbar d-flex align-items-center text-dark text-decoration-none" href="/">
                         <div class="fs-5 d-none d-md-block mr-3">Швейна Рота</div>
-                        <img 
-                            src="/static/icons/favicon.png" 
-                            alt="Швейна рота" 
-                            class="img-fluid" 
+                        <img
+                            src="icons/favicon.png"
+                            alt="Швейна рота"
+                            class="img-fluid"
                             style="width: 50px; height: 50px;">
                     </a>
                     <!-- Пошук на мобільному -->
@@ -53,19 +54,19 @@
                             <i class="fas fa-search"></i>
                         </button> -->
                         <div id="search-bar-mobile" class="d-none-mobile">
-                            <form 
-                                id="search-form" 
-                                action="/search" 
-                                method="GET" 
+                            <form
+                                id="search-form"
+                                action="/search"
+                                method="GET"
                                 class="form-inline d-flex justify-content-center"
                                 onsubmit="clearSearchInput()"
                             >
-                                <input 
-                                    type="text" 
-                                    name="text" 
+                                <input
+                                    type="text"
+                                    name="text"
                                     id="search-input-mobile"
-                                    class="form-control me-3 " 
-                                    placeholder="Пошук..." 
+                                    class="form-control me-3 "
+                                    placeholder="Пошук..."
                                     required>
                             </form>
                         </div>
@@ -98,23 +99,23 @@
                                     <i class="fas fa-search"></i>
                                 </button>
                                 <div id="search-bar" class="d-none">
-                                    <form 
-                                        id="search-form" 
-                                        action="/search" 
-                                        method="GET" 
+                                    <form
+                                        id="search-form"
+                                        action="/search"
+                                        method="GET"
                                         class="form-inline d-flex justify-content-center"
                                         onsubmit="clearSearchInput()"
                                     >
-                                        <input 
-                                            type="text" 
-                                            name="text" 
+                                        <input
+                                            type="text"
+                                            name="text"
                                             id="search-input"
-                                            class="form-control me-3 w-150" 
-                                            placeholder="Пошук..." 
+                                            class="form-control me-3 w-150"
+                                            placeholder="Пошук..."
                                             required>
                                     </form>
                                 </div>
-                            </div>  
+                            </div>
                             <!-- Зміна мови -->
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -123,12 +124,12 @@
                                 <ul class="dropdown-menu" aria-labelledby="languageDropdown">
                                     <li>
                                         <a class="dropdown-item" href="#" id="ukrainian">
-                                            <img src="/static/img/Flag_of_Ukraine.png" alt="UA" width="20" class="me-2"> Українська
+                                            <img src="img/Flag_of_Ukraine.png" alt="UA" width="20" class="me-2"> Українська
                                         </a>
                                     </li>
                                     <li>
                                         <a class="dropdown-item" href="#" id="english">
-                                            <img src="/static/img/Flag_of_the_United_Kingdom_(3-2).svg.png" alt="EN" width="20" class="me-2"> English
+                                            <img src="img/Flag_of_the_United_Kingdom_(3-2).svg.png" alt="EN" width="20" class="me-2"> English
                                         </a>
                                     </li>
                                 </ul>
@@ -153,20 +154,20 @@
                 </nav>
             </div>
         </header>
-    
+
             <section class="text-center mb-5">
                 <h2>Про нас</h2>
                 <p class="mt-4">
-                    Ми добровільне об'єднання "Швейна рота", яке на волонтерських засадах відшиває адаптивний одяг для поранених військових. 
+                    Ми добровільне об'єднання "Швейна рота", яке на волонтерських засадах відшиває адаптивний одяг для поранених військових.
                     Адаптивний одяг має липучки/кнопки/зав'язки, що дозволяє швидко і безболісно одягатися. Ми шиємо штани, шорти, футболки та інший одяг.
                 </p>
                 <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLScwlcFX3jqmOrJ3oXMrcNJJS3-LgfYy5fjMlXSlSmpU6HaLaw/viewform" class="btn btn-main btn-lg">Замовити адаптивний одяг</a>
             </section>
-    
+
             <section class="row text-center mb-5">
                 <div class="col-md-4">
                     <h3>700+</h3>
-                    <p>Волонтерів в усіх частинах світу! 
+                    <p>Волонтерів в усіх частинах світу!
                     </p>
                 </div>
                 <div class="col-md-4">
@@ -198,24 +199,24 @@
                         </div>
                     </div>
                 </div>
-            </section>            
-            
+            </section>
+
             <section class="text-center mb-5">
                 <h2>Ми в медіа</h2>
                 <div id="mediaCarousel" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <div class="d-flex justify-content-center">
-                                <img src="/static/img/pronas1.jpg" alt="Медіа 1" class="mx-2" >
-                                <img src="/static/img/pronas1.jpg" alt="Медіа 2" class="mx-2 " >
-                                <img src="/static/img/pronas1.jpg" alt="Медіа 3" class="mx-2 " >
+                                <img src="img/pronas1.jpg" alt="Медіа 1" class="mx-2" >
+                                <img src="img/pronas1.jpg" alt="Медіа 2" class="mx-2 " >
+                                <img src="img/pronas1.jpg" alt="Медіа 3" class="mx-2 " >
                             </div>
                         </div>
                         <div class="carousel-item">
                             <div class="d-flex justify-content-center">
-                                <img src="/static/img/pronas2.jpg" alt="Медіа 4" class="mx-2 " >
-                                <img src="/static/img/pronas2.jpg" alt="Медіа 5" class="mx-2 " >
-                                <img src="/static/img/pronas2.jpg" alt="Медіа 6" class="mx-2 " >
+                                <img src="img/pronas2.jpg" alt="Медіа 4" class="mx-2 " >
+                                <img src="img/pronas2.jpg" alt="Медіа 5" class="mx-2 " >
+                                <img src="img/pronas2.jpg" alt="Медіа 6" class="mx-2 " >
                             </div>
                         </div>
                         <!-- Додайте більше елементів каруселі тут за потреби -->
@@ -229,24 +230,24 @@
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
-            </section>            
-            
+            </section>
+
             <section class="text-center mb-5">
                 <h2>Наші партнери</h2>
                 <div id="partnersCarousel" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <div class="d-flex justify-content-center">
-                                <img src="/static/img/partner.jpg" alt="Партнер 1" class="partner-logo mx-2 ">
-                                <img src="/static/img/partner.jpg" alt="Партнер 2" class="partner-logo mx-2 ">
-                                <img src="/static/img/partner.jpg" alt="Партнер 3" class="partner-logo mx-2 ">
+                                <img src="img/partner.jpg" alt="Партнер 1" class="partner-logo mx-2 ">
+                                <img src="img/partner.jpg" alt="Партнер 2" class="partner-logo mx-2 ">
+                                <img src="img/partner.jpg" alt="Партнер 3" class="partner-logo mx-2 ">
                             </div>
                         </div>
                         <div class="carousel-item">
                             <div class="d-flex justify-content-center">
-                                <img src="/static/img/partner3.jpg" alt="Партнер 4" class="partner-logo mx-2 ">
-                                <img src="/static/img/partner3.jpg" alt="Партнер 5" class="partner-logo mx-2 ">
-                                <img src="/static/img/partner3.jpg" alt="Партнер 6" class="partner-logo mx-2 ">
+                                <img src="img/partner3.jpg" alt="Партнер 4" class="partner-logo mx-2 ">
+                                <img src="img/partner3.jpg" alt="Партнер 5" class="partner-logo mx-2 ">
+                                <img src="img/partner3.jpg" alt="Партнер 6" class="partner-logo mx-2 ">
                             </div>
                         </div>
                         <div class="carousel-item">
@@ -274,16 +275,16 @@
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <div class="d-flex justify-content-center">
-                                <img src="/static/img/member2.jpg" alt="Партнер 1" class="partner-logo mx-2 ">
-                                <img src="/static/img/member1.jpg" alt="Партнер 2" class="partner-logo mx-2 ">
-                                <img src="/static/img/member2.jpg" alt="Партнер 3" class="partner-logo mx-2 ">
+                                <img src="img/member2.jpg" alt="Партнер 1" class="partner-logo mx-2 ">
+                                <img src="img/member1.jpg" alt="Партнер 2" class="partner-logo mx-2 ">
+                                <img src="img/member2.jpg" alt="Партнер 3" class="partner-logo mx-2 ">
                             </div>
                         </div>
                         <div class="carousel-item">
                             <div class="d-flex justify-content-center">
-                                <img src="/static/img/member2.jpg" alt="Партнер 4" class="partner-logo mx-2 ">
-                                <img src="/static/img/member2.jpg" alt="Партнер 5" class="partner-logo mx-2 ">
-                                <img src="/static/img/member2.jpg" alt="Партнер 6" class="partner-logo mx-2 ">
+                                <img src="img/member2.jpg" alt="Партнер 4" class="partner-logo mx-2 ">
+                                <img src="img/member2.jpg" alt="Партнер 5" class="partner-logo mx-2 ">
+                                <img src="img/member2.jpg" alt="Партнер 6" class="partner-logo mx-2 ">
                             </div>
                         </div>
                         <!-- Додайте більше елементів каруселі тут за потреби -->
@@ -298,11 +299,11 @@
                     </a>
                 </div>
             </section>
-            <section class="text-center mb-5">
-                <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <div id="map" style="height: 500px; width: 100%;"></div>
-    </section>
+        <section class="text-center mb-5">
+            <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<div id="map" style="height: 500px; width: 100%;"></div>
+</section>
     </div>
         
     <footer class="bg-dark text-white py-4 mt-auto">
@@ -357,13 +358,13 @@
         </div>
     </footer>
       
-    <script src="/static/js/button_back_col.js" type="text/javascript"></script>
+    <script src="js/button_back_col.js" type="text/javascript"></script>
     <!-- <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/static/js/nav_search.js"></script>
+    <script src="js/nav_search.js"></script>
     <script src="static/js/about.js"></script>
 </body>
 </html>

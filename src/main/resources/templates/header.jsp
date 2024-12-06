@@ -3,12 +3,12 @@
     <div class="container px-0 px-lg-3">
         <nav class="navbar navbar-expand-lg custom-navbar py-3 px-lg-0">
             <!-- Лого -->
-            <a class="navbar d-flex align-items-center text-dark text-decoration-none" href="/">
+            <a class="navbar d-flex align-items-center text-dark text-decoration-none" href="${pageContext.request.contextPath}">
                 <div class="fs-5 d-none d-md-block mr-3">Швейна Рота</div>
                 <img 
-                    src="/icons/favicon.png" 
-                    alt="Швейна рота" 
-                    class="img-fluid" 
+                    src="icons/favicon.png"
+                    alt="Швейна рота"
+                    class="img-fluid"
                     style="width: 50px; height: 50px;">
             </a>
             <!-- Пошук на мобільному -->
@@ -17,19 +17,19 @@
                     <i class="fas fa-search"></i>
                 </button> -->
                 <div id="search-bar-mobile" class="d-none-mobile">
-                    <form 
-                        id="search-form" 
-                        action="/search" 
-                        method="GET" 
+                    <form
+                        id="search-form"
+                        action="/search"
+                        method="GET"
                         class="form-inline d-flex justify-content-center"
                         onsubmit="clearSearchInput()"
                     >
-                        <input 
-                            type="text" 
-                            name="text" 
+                        <input
+                            type="text"
+                            name="text"
                             id="search-input-mobile"
-                            class="form-control me-3 " 
-                            placeholder="Пошук..." 
+                            class="form-control me-3 "
+                            placeholder="Пошук..."
                             required>
                     </form>
                 </div>
@@ -42,16 +42,16 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto ml-3">
                     <!-- <li class="nav-item">
-                        <a class="nav-link" href="/">Головна</a>
+                        <a class="nav-link" href="${pageContext.request.contextPath}">Головна</a>
                     </li> -->
                     <li class="nav-item">
-                        <a class="nav-link" href="/news.html">Новини</a>
+                        <a class="nav-link" href="news">Новини</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/posts.html">Майстер-класи</a>
+                        <a class="nav-link" href="masterclasses">Майстер-класи</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/about.html">Про нас</a>
+                        <a class="nav-link" href="about">Про нас</a>
                     </li>
                 </ul>
                 <hr class="dropdown-divider mt-2 mb-2">
@@ -62,37 +62,37 @@
                             <i class="fas fa-search"></i>
                         </button>
                         <div id="search-bar" class="d-none">
-                            <form 
-                                id="search-form" 
-                                action="/search" 
-                                method="GET" 
+                            <form
+                                id="search-form"
+                                action="/search"
+                                method="GET"
                                 class="form-inline d-flex justify-content-center"
                                 onsubmit="clearSearchInput()"
                             >
-                                <input 
-                                    type="text" 
-                                    name="text" 
+                                <input
+                                    type="text"
+                                    name="text"
                                     id="search-input"
-                                    class="form-control me-3 w-150" 
-                                    placeholder="Пошук..." 
+                                    class="form-control me-3 w-150"
+                                    placeholder="Пошук..."
                                     required>
                             </form>
                         </div>
-                    </div>  
+                    </div>
                     <!-- Зміна мови -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <div class="nav-link dropdown-toggle" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Мова
-                        </a>
+                        </div>
                         <ul class="dropdown-menu" aria-labelledby="languageDropdown">
                             <li>
-                                <a class="dropdown-item" href="#" id="ukrainian">
-                                    <img src="/img/Flag_of_Ukraine.png" alt="UA" width="20" class="me-2"> Українська
+                                <a class="dropdown-item" href="changeLanguage?language=uk" id="ukrainian">
+                                    <img src="img/Flag_of_Ukraine.png" alt="UA" width="20" class="me-2"> Українська
                                 </a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="#" id="english">
-                                    <img src="/img/Flag_of_the_United_Kingdom_(3-2).svg.png" alt="EN" width="20" class="me-2"> English
+                                <a class="dropdown-item" href="changeLanguage?language=en" id="english">
+                                    <img src="img/Flaga_of_the_United_Kingdom_(3-2).svg.png" alt="EN" width="20" class="me-2"> English
                                 </a>
                             </li>
                         </ul>
