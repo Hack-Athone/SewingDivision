@@ -14,7 +14,7 @@ public class NewsRepository {
     private NamedParameterJdbcOperations jdbcOperations;
 
     public List<Map<String, Object>> getAllNews(){
-        String sql = "SELECT * FROM content ORDER BY date DESC";
+        String sql = "SELECT * FROM news";
         return jdbcOperations.queryForList(sql, new HashMap<>());
     }
 }

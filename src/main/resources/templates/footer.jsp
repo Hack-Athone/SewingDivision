@@ -30,9 +30,9 @@
             <div class="col-12 col-md-4 mb-4">
                 <h3 class="footer-title">Корисні посилання</h3>
                 <ul class="list-unstyled footer-links">
-                    <li><a href="/">Головна</a></li>
-                    <li><a href="/posts.html">Публікації</a></li>
-                    <li><a href="/about.html">Про нас</a></li>
+                    <li><a href="${pageContext.request.contextPath}">Головна</a></li>
+                    <li><a href="masterclasses">Публікації</a></li>
+                    <li><a href="about">Про нас</a></li>
                 </ul>
             </div>
         </div>
@@ -44,7 +44,7 @@
             <div class="col-lg-6 text-lg-right text-center">
                 <p class="small footer-text mb-0">
                     Сайт створено 
-                    <a href="https://github.com/MichailoZaichenko/shveina_rota_front.git" target="_blank">командою SIGMA</a>
+                    <a href="https://github.com/Hack-Athone/SewingDivision" target="_blank">командою SIGMA</a>
                 </p>
             </div>
         </div>

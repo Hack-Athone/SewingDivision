@@ -16,7 +16,7 @@ public class ErrorControllerImpl implements ErrorController {
             int statusCode = Integer.parseInt(status.toString());
 
             if(statusCode == HttpStatus.NOT_FOUND.value()) {
-                return "error404";
+                return "404";
             }
         }
         return "error";

@@ -5,6 +5,7 @@ import jakarta.servlet.http.HttpSession;
 import org.sewingdivision.repository.ContentRepository;
 import org.sewingdivision.repository.MasterclassRepository;
 import org.sewingdivision.repository.NewsRepository;
+import org.sewingdivision.repository.entity.ContentEntity;
 import org.sewingdivision.repository.entity.NewsEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -34,31 +35,34 @@ public class NavController {
 
     @GetMapping("/")
     public String mainPage(){
-        String lang = (String) session.getAttribute("lang");
-        if(lang==null){
-            session.setAttribute("lang", "uk");
-            lang = "uk";
-        }
+//        String lang = (String) session.getAttribute("lang");
+//        checkLang(lang);
 
-        if(lang.equals("uk")){
+//        if(lang.equals("uk")){
             return "index_ua";
-        } else {
-            return "index_en";
-        }
+//        } else {
+//            return "index_en";
+//        }
     }
+
+
 
     @GetMapping("/about")
     public String aboutPage(){
-        String lang = (String) session.getAttribute("lang");
-        if(lang.equals("uk")){
+//        checkLang((String) session.getAttribute("lang"));
+//
+//        String lang = (String) session.getAttribute("lang");
+//        if(lang.equals("uk")){
             return "about_ua";
-        } else {
-            return "about_en";
-        }
+//        } else {
+//            return "about_en";
+//        }
     }
 
     @GetMapping("/news")
     public String newsPage(Model model){
+//        checkLang((String) session.getAttribute("lang"));
+
         List<Map<String, Object>> news = newsRepository.getAllNews();
         model.addAttribute("newsList", news);
         return "news";
@@ -66,13 +70,17 @@ public class NavController {
 
     @GetMapping("/news-{id}")
     public String newsIdPage(@PathVariable int id, Model model){
-        List<Map<String, Object>> thisNews = contentRepository.getNewsContent(id);
-        model.addAttribute("newsList", thisNews);
-        return "news";
+//        checkLang((String) session.getAttribute("lang"));
+
+        ContentEntity thisNews = contentRepository.getNewsContent(id);
+        model.addAttribute("news", thisNews);
+        return "news-id";
     }
 
     @GetMapping("/masterclasses")
     public String masterclassesPage(Model model){
+//        checkLang((String) session.getAttribute("lang"));
+
         List<Map<String, Object>> preferredMasterclasses = masterclassRepository.getAllPreferredMasterclasses();
         List<Map<String, Object>> nonPreferredMasterclasses = masterclassRepository.getAllNonPreferredMasterclasses();
         model.addAttribute("preferredMasterclasses", preferredMasterclasses);
@@ -80,10 +88,19 @@ public class NavController {
         return "masterclasses";
     }
 
+    @GetMapping("/masterclass-{id}")
+    public String masterclassIdPage(@PathVariable int id, Model model){
+//        checkLang((String) session.getAttribute("lang"));
+
+        ContentEntity thisNews = contentRepository.getNewsContent(id);
+        model.addAttribute("news", thisNews);
+        return "news-id";
+    }
+
     @GetMapping("changeLanguage")
     public String changeLanguage(@RequestParam String language, HttpServletRequest request){
         session.setAttribute("lang", language);
-        return "redirect:/" + request.getHeader("referer");
+        return "redirect:" + request.getHeader("referer");
     }
 
     @GetMapping("search")
@@ -94,4 +111,10 @@ public class NavController {
         model.addAttribute("masterclasses", listOfMasterclasses);
         return "category";
     }
+
+//    private void checkLang(String lang) {
+//        if(lang==null){
+//            session.setAttribute("lang", "uk");
+//        }
+//    }
 }

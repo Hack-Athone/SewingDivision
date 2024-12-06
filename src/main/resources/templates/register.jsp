@@ -1,3 +1,4 @@
+<%@ page contentType="text/html; charset=utf-8" %>
 <!DOCTYPE html>
 <html lang="uk">
 <head>
@@ -51,7 +52,7 @@
 
                     <!-- Вже є акаунт? -->
                     <div class="text-center mt-3">
-                        Вже маєте акаунт? <a href="/login.html" class="text-decoration-none">Увійти</a>
+                        Вже маєте акаунт? <a href="login" class="text-decoration-none">Увійти</a>
                     </div>
                 </form>
             </div>

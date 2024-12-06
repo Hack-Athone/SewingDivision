@@ -1,3 +1,4 @@
+<%@ page contentType="text/html; charset=utf-8" %>
 <!DOCTYPE html>
 <html lang="uk">
 <head>
@@ -51,7 +52,7 @@
 
                     <!-- Забули пароль або реєстрація -->
                     <div class="text-center mt-3">
-                        Не маєте акаунту? <a href="/register.html" class="text-decoration-none">Зареєструватися</a>
+                        Не маєте акаунту? <a href="register" class="text-decoration-none">Зареєструватися</a>
                     </div>
                 </form>
             </div>

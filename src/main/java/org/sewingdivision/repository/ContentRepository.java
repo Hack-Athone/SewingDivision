@@ -1,6 +1,8 @@
 package org.sewingdivision.repository;
 
+import org.sewingdivision.repository.entity.ContentEntity;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcOperations;
 import org.springframework.jdbc.core.namedparam.SqlParameterSource;
@@ -14,9 +16,9 @@ public class ContentRepository {
     @Autowired
     private NamedParameterJdbcOperations jdbcOperations;
 
-    public List<Map<String, Object>> getNewsContent(int newsId){
+    public ContentEntity getNewsContent(int newsId){
         String sql = "SELECT * FROM content WHERE section = \"news\" AND reference_id = :id;";
         SqlParameterSource namedParameters = new MapSqlParameterSource().addValue("id", newsId);
-        return jdbcOperations.queryForList(sql, namedParameters);
+        return jdbcOperations.queryForObject(sql, namedParameters, new BeanPropertyRowMapper<>(ContentEntity.class));
     }
 }

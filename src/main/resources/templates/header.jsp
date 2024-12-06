@@ -1,3 +1,4 @@
+<%@ taglib uri="jakarta.tags.core" prefix="c" %>
 <%@ page contentType="text/html; charset=utf-8" %>
 <header class="header">
     <div class="container px-0 px-lg-3">
@@ -19,7 +20,7 @@
                 <div id="search-bar-mobile" class="d-none-mobile">
                     <form
                         id="search-form"
-                        action="/search"
+                        action="search"
                         method="GET"
                         class="form-inline d-flex justify-content-center"
                         onsubmit="clearSearchInput()"
@@ -92,27 +93,33 @@
                             </li>
                             <li>
                                 <a class="dropdown-item" href="changeLanguage?language=en" id="english">
-                                    <img src="img/Flaga_of_the_United_Kingdom_(3-2).svg.png" alt="EN" width="20" class="me-2"> English
+                                    <img src="img/Flag_of_the_United_Kingdom_(3-2).svg.png" alt="EN" width="20" class="me-2"> English
                                 </a>
                             </li>
                         </ul>
                     </li>
                     <!-- Аккант -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="userDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fas fa-user-alt me-1"></i>{{ Your_account }}
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="userDropdown">
-                            <li><a class="dropdown-item" href="/profile.html">Профіль</a></li>
-                            <li><a class="dropdown-item" href="/add-article.html">Додати новину</a></li>
-                            <li><a class="dropdown-item" href="/add-article.html">Додати публікацію</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><button id="toggle-theme" class="dropdown-item" style="border-radius: 0;">Змінити тему</button></li>
-                            <li><a class="dropdown-item" href="/">Вийти</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="/login.html">Увійти</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/register.html">Створити акаунт</a></li>
+                    <c:choose>
+                    <c:when test="${pageContext.request.userPrincipal.name == null}">
+                        <li class="nav-item"><a class="nav-link" href="login">Увійти</a></li>
+                        <li class="nav-item"><a class="nav-link" href="register">Створити акаунт</a></li>
+                    </c:when>
+                    <c:otherwise>
+                        <li class="nav-item dropdown">
+                           <div class="nav-link dropdown-toggle" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                               <i class="fas fa-user-alt me-1"></i>{{ Your_account }}
+                           </div>
+                           <ul class="dropdown-menu" aria-labelledby="userDropdown">
+                               <li><a class="dropdown-item" href="/profile.html">Профіль</a></li>
+                               <li><a class="dropdown-item" href="/add-article.html">Додати новину</a></li>
+                               <li><a class="dropdown-item" href="/add-article.html">Додати публікацію</a></li>
+                               <li><hr class="dropdown-divider"></li>
+                               <li><button id="toggle-theme" class="dropdown-item" style="border-radius: 0;">Змінити тему</button></li>
+                               <li><a class="dropdown-item" href="/">Вийти</a></li>
+                           </ul>
+                        </li>
+                    </c:otherwise>
+                    </c:choose>
                 </ul>
             </div>
         </nav>
