@@ -1,3 +1,4 @@
+<%@ page contentType="text/html; charset=utf-8" %>
 <header class="header">
     <div class="container px-0 px-lg-3">
         <nav class="navbar navbar-expand-lg custom-navbar py-3 px-lg-0">

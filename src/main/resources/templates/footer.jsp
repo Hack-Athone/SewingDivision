@@ -1,3 +1,4 @@
+<%@ page contentType="text/html; charset=utf-8" %>
 <footer class="bg-dark text-white py-4 mt-auto">
     <div class="container">
         <div class="row">
